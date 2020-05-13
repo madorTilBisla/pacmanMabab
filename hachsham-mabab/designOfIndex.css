@@ -1,0 +1,251 @@
+/* code that is here, until the first @media block, will apply to any screen size */
+
+@font-face{
+    font-family: Abraham;
+    src: url("Abraham-Regular.ttf");
+}
+
+body{
+    background-color: #e5dbca;
+    font-family: Abraham;
+    overflow: hidden;
+}
+
+.welcome{
+    color: #4d4d4d;
+    text-align: center;
+}
+
+.explain{
+    color: #666666;
+    text-align: center;
+    font-weight: bold;
+}
+
+#stripsImg{
+    position: absolute;
+}
+
+.logos{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.madors{
+    text-align: center;
+    color: black;
+}
+
+.coaporation{
+    color: #931c27;
+}
+
+.startExpl{
+    color: #666666;
+}
+
+/*Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 780px) {
+    .welcome{
+        font-size: 12vw;
+        margin-top: 2vh;
+        margin-top: calc(var(--vh, 1vh) * 2);
+    }
+    
+    .explain{
+        font-size: 5vw;
+        margin-top: 2vh;
+        margin-top: calc(var(--vh, 1vh) * 2);
+    }
+    
+    #stripsImg{
+        top: 20vh;
+        top: calc(var(--vh, 1vh) *20);
+        left: -10vw;
+        width: 120vw;
+        height: auto;
+    }
+    
+    .logos{
+        justify-content: center;
+        margin-top: 42vh;
+        margin-top: calc(var(--vh, 1vh) * 42);
+    }
+    
+    .madors{
+        font-size: 4vw;
+    }
+    
+    #hachshamLogo{
+        width: 14vw;
+        height: auto;
+        margin-right: 4vw;
+    }
+    
+    #tilLogo{
+        width: 14vw;
+        height: auto;
+        margin-left: 4vw;
+    }
+    
+    .startExpl{
+        font-size: 5vw;
+        margin-top: 5vh;
+        margin-top: calc(var(--vh, 1vh) * 5);
+        margin-left: 25vw;
+    }
+}
+
+/* Extra small devices landscape (phones, 600px and down) */
+@media only screen and (max-width: 736px) {
+    .welcome{
+        font-size: 7vw;
+        margin-top: 3vh;
+        margin-top: calc(var(--vh, 1vh) * 4);
+    }
+    
+    .explain{
+        font-size: 4vw;
+        margin-top: 4vh;
+        margin-top: calc(var(--vh, 1vh) * 4);
+    }
+    
+    #stripsImg{
+        top: 35vh;
+        top: calc(var(--vh, 1vh) * 35);
+        left: -10vw;
+        width: 70vw;
+        height: auto;
+    }
+    
+    .logos{
+        justify-content: center;
+        margin-top: 10vh;
+        margin-top: calc(var(--vh, 1vh) * 10);
+    }
+    
+    .madors{
+        font-size: 3vw;
+    }
+    
+    #hachshamLogo{
+        width: 12vw;
+        height: auto;
+        margin-right: 4vw;
+    }
+    
+    #tilLogo{
+        width: 12vw;
+        height: auto;
+        margin-left: 4vw;
+    }
+    
+    .startExpl{
+        font-size: 3vw;
+        margin-top: 22vh;
+        margin-top: calc(var(--vh, 1vh) * 22);
+        margin-left: 65vw;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 440px) {
+    .welcome{
+        font-size: 13vw;
+        margin-top: 4vh;
+        margin-top: calc(var(--vh, 1vh) * 4);
+    }
+    
+    .explain{
+        font-size: 5vw;
+        margin-top: 2vh;
+        margin-top: calc(var(--vh, 1vh) * 2);
+    }
+    
+    #stripsImg{
+        top: 25vh;
+        top: calc(var(--vh, 1vh) * 25);
+        left: -10vw;
+        width: 140vw;
+        height: auto;
+    }
+    
+    .logos{
+        margin-top: 45vh;
+        margin-top: calc(var(--vh, 1vh) * 45);
+    }
+    
+    .madors{
+        font-size: 6vw;
+    }
+    
+    #hachshamLogo{
+        width: 22vw;
+        height: auto;
+    }
+    
+    #tilLogo{
+        width: 22vw;
+        height: auto;
+    }
+    
+    .startExpl{
+        font-size: 5vw;
+        margin-top: 5vh;
+        margin-top: calc(var(--vh, 1vh) * 5);
+        margin-left: 25vw;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .welcome{
+        font-size: 7vw;
+        margin-top: 3vh;
+        margin-top: calc(var(--vh, 1vh) * 4);
+    }
+    
+    .explain{
+        font-size: 4vw;
+        margin-top: 4vh;
+        margin-top: calc(var(--vh, 1vh) * 4);
+    }
+    
+    #stripsImg{
+        top: 45vh;
+        top: calc(var(--vh, 1vh) * 45);
+        left: -10vw;
+        width: 85vw;
+        height: auto;
+        transform: rotate(-5deg);
+    }
+    
+    .logos{
+        justify-content: center;
+        margin-top: 10vh;
+        margin-top: calc(var(--vh, 1vh) * 10);
+    }
+    
+    .madors{
+        font-size: 4vw;
+    }
+    
+    #hachshamLogo{
+        width: 14vw;
+        height: auto;
+        margin-right: 4vw;
+    }
+    
+    #tilLogo{
+        width: 14vw;
+        height: auto;
+        margin-left: 4vw;
+    }
+    
+    .startExpl{
+        font-size: 3vw;
+        margin-top: 6vh;
+        margin-top: calc(var(--vh, 1vh) * 6);
+        margin-left: 35vw;
+    }
+} 

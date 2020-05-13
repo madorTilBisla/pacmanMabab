@@ -1,0 +1,1278 @@
+@viewport {
+    width: device-width ;
+    zoom: 1.0 ;
+}
+
+@-ms-viewport {
+    width: device-width ;
+}
+
+/* code that is here, until the first @media block, will apply to any screen size */
+@font-face{
+    font-family: Assistant;
+    src: url("Assistant-Regular.ttf");
+}
+
+@font-face{
+    font-family: VarelaRound;
+    src: url("VarelaRound-Regular.ttf");
+}
+
+@font-face{
+    font-family: Abraham;
+    src: url("Abraham-Regular.ttf");
+}
+
+body{
+    background-color: #e5dbca;
+    font-family: VarelaRound;
+    touch-action: manipulation;
+    overflow: hidden;
+}
+
+.grayScreen{
+    background-color: rgba(88, 88, 88, 0.7);
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    width: 100vw;
+    position: absolute;
+    top: 0vh;
+    top: calc(var(--vh, 1vh) * 0);
+    left: 0vw;
+}
+
+.instructions{
+    background-color: rgba(225, 225, 225, 0.9);
+    direction: rtl;
+    text-align: center;
+    border-radius: 3vw;
+    position: absolute;
+    z-index: 1;
+    padding: 3vw;
+}
+
+.instructionsTitle{
+    font-family: Abraham;
+}
+
+.instructionsButton{
+    background-color: cornflowerblue;
+    color: black;
+    border: none;
+    font-family: VarelaRound;
+}
+
+.feedBackBox{
+    direction: rtl;
+    border-radius: 3vh;
+    border-radius: calc(var(--vh, 1vh) * 3);
+    position: absolute;
+    z-index: 2;
+    padding: 3vh;
+    padding: calc(var(--vh, 1vh) * 3);
+}
+
+.backBtn{
+    background-color: black;
+    border-radius: 1.5vh;
+    border-radius: calc(var(--vh, 1vh) * 1.5);
+    color: white;
+    border: 0vw;
+    padding: 1vw;
+}
+
+.title{
+    color: black;
+    position: absolute;
+    direction: rtl;
+    text-align: center;
+    z-index: -1;
+    font-weight: 1000;
+    font-family: Abraham;
+}
+
+#score{
+    color: gray;
+    text-align: center;
+    font-size: 4vh;
+    font-size: calc(var(--vh, 1vh) * 4);
+    font-family: Abraham;
+}
+
+#boardArea{
+    position: absolute;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.packman{
+    position: relative;
+    z-index: -1;
+}
+
+.allRow{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.rows{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.arrow{
+    cursor: pointer;
+}
+
+.vertical{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+}
+
+.horizontal{
+    position: absolute;
+}
+
+#n37{
+    transform: rotate(180deg);
+}
+
+#n38{
+    transform: rotate(-90deg);
+}
+
+#n40{
+    transform: rotate(90deg);
+}
+
+.questionsArea{
+    background-color: rgba(255, 255, 255, 0.762);
+    direction: rtl;
+    border-radius: 3vh;
+    border-radius: calc(var(--vh, 1vh) * 3);
+    position: absolute;
+    z-index: 1;
+    padding-right: 2vw;
+    padding-left: 2vw;
+    padding-top: 2vh;
+    padding-top: calc(var(--vh, 1vh) * 2);
+}
+
+.answers{
+    direction: rtl;
+}
+
+input{
+    float: right;
+    text-align: left;
+}
+
+span{
+    float: left;
+    text-align: right;
+}
+
+.subjectTitle{
+    text-align: center;
+    font-weight: bold;
+    font-style: underline;
+}
+
+.quesionTitle{
+    font-weight: bolder;
+}
+
+.submitBtn{
+    float: left;
+    margin-bottom: 4vh;
+    margin-bottom: calc(var(--vh, 1vh) * 4);
+    margin-left: 2vw;
+    border: none;
+    color: black;
+    background-color: cornflowerblue;
+    border-radius: 2vh;
+    border-radius: calc(var(--vh, 1vh) * 2);
+    font-family: VarelaRound;
+    padding: 1vw;
+}
+
+.congrats{
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+.finalScore{
+    position: absolute;      
+    direction: rtl;
+    background-color: cornflowerblue;
+}
+
+.credits{
+    position: absolute;
+    direction: rtl;
+
+}
+
+.confetti{
+    position: absolute;
+    width: 100vw;
+    z-index: -2;
+}
+  
+ /*Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 780px) {
+    .instructions{
+        left: 12vw;
+        top: 16vh;
+        top: calc(var(--vh, 1vh) * 16);
+        width: 70vw;
+        font-size: 5vw;
+    }
+    
+    .instructionsTitle{
+        font-size: 9vw;
+    }
+    
+    .instructionsButton{
+        font-size: 5vw;
+        padding: 2vw;
+        border-radius: 2vw;
+    }
+
+    #boardArea{
+        width:70vw;
+        height: 70vh;
+        height: calc(var(--vh, 1vh) * 70);
+        left: 15vw;
+        top: 12vh;
+        top: calc(var(--vh, 1vh) * 12);
+    } 
+
+    .imgBack{
+        width: 20vw;
+        height: 21vh;
+        height: calc(var(--vh, 1vh) * 21);
+        position: absolute;
+        top: 79vh;
+        top: calc(var(--vh, 1vh) * 79);
+        left: 79vw;
+        z-index: -1;
+    }
+
+    .title{
+        font-size: 7vw;
+        top: 1vh;
+        top: calc(var(--vh, 1vh) * 1);
+        right: 30vw;
+    }
+
+    #score{
+        position: absolute;
+        top: 85vh;
+        top: calc(var(--vh, 1vh) * 85);
+        left: 15vw;
+        font-size: 5vw;
+    }
+
+    .packman{
+        width: 6.5vw;
+        height: 7vh;
+        height: calc(var(--vh, 1vh) * 7);
+        left: 31.5vw;
+        top: 25.5vh;
+        top: calc(var(--vh, 1vh) * 25.5);
+    }
+
+    .space{
+        width: 2vw;
+        height: 1.6vh;
+        height: calc(var(--vh, 1vh) * 1.6);
+    }
+
+    .rows{
+        width: 70vw;
+        height: 70vh;
+        height: calc(var(--vh, 1vh) * 70);
+        left: 0vw;
+        top: 0vh;
+        top: calc(var(--vh, 1vh) * 0);
+    }
+
+    .arrow{
+        width: 6vw;
+        height: auto;
+    }
+
+    .vertical{
+        top: 78.5vh;
+        top: calc(var(--vh, 1vh) * 78.5);
+        left: 51vw;
+    }
+
+    .horizontal{
+        top: 82.5vh;
+        top: calc(var(--vh, 1vh) * 82.5);
+        left: 38.4vw;
+    }
+
+    .allRow{
+        width: 70vw;
+        left: 1.5vw;
+    }
+    
+    .food{
+        width: 2vw;
+        height: 1.6vh;
+        height: calc(var(--vh, 1vh) * 1.6);
+    }
+
+    .nothing{
+        width: 2vw;
+        height: 1.6vh;
+        height: calc(var(--vh, 1vh) * 1.6);
+    }
+
+    .questionsArea{
+        width: 75vw;
+        top: 8vh;
+        top: calc(var(--vh, 1vh) * 8);
+        left: 11vw;
+        font-size: 3.8vw;
+    }
+
+    .subjectTitle{
+        font-size: 5.5vw;
+    }
+
+    .feedBackBox{
+        font-size: 4vw;
+        width: 45vw;
+        top: 18vh;
+        top: calc(var(--vh, 1vh) * 18);
+        left: 26vw;
+        text-align: center;
+    }
+
+    .backBtn{
+        font-size: 3.5vw;
+        margin-top: 2vh;
+        margin-top: calc(var(--vh, 1vh) * 2);
+        font-family: VarelaRound;
+        padding: 2vw;
+    }
+
+    .submitBtn{
+        font-size: 3.5vw;
+        padding: 2vw;
+    }
+
+    #n37{
+        padding-left: 3vw;
+        padding-right: 8vw;
+    }
+    
+    #n38{
+        margin-bottom: 3vh;
+        margin-bottom: calc(var(--vh, 1vh) * 3);
+    }
+    
+    #n40{
+        margin-bottom: 2vh;
+        margin-bottom: calc(var(--vh, 1vh) * 2);
+    }
+
+    .congrats{
+        font-size: 12vw;
+    }
+
+    .finalScore{
+        top: 40vh;
+        top: calc(var(--vh, 1vh) * 40);
+        left: 23vw;
+        font-size: 6vw;
+        border-radius: 3vw;
+        padding: 3vw;
+    }
+
+    .credits{
+        top: 84vh;
+        top: calc(var(--vh, 1vh) * 84);
+        left: 4vw;
+        font-size: 4vw;
+    }
+
+    .confetti{
+        top: 12vh;
+        top: calc(var(--vh, 1vh) * 12);
+        left: 0vw;
+        width: 100vw;
+        height: auto;
+    }
+}
+
+/* Extra small devices landscape (phones, 600px and down) */
+@media only screen and (max-width: 736px) {
+    .instructions{
+        left: 12.5vw;
+        top: 10vh;
+        top: calc(var(--vh, 1vh) * 10);
+        width: 70vw;
+        font-size: 3vw;
+    }
+    
+    .instructionsTitle{
+        font-size: 6vw;
+    }
+    
+    .instructionsButton{
+        font-size: 3vw;
+        padding: 1vw;
+        border-radius: 2vw;
+    }
+
+    #boardArea{
+        width: 50vw;
+        height: 90vh;
+        height: calc(var(--vh, 1vh) * 90);
+        left: 5vw;
+        top: 7vh;
+        top: calc(var(--vh, 1vh) * 7);
+    } 
+
+    .imgBack{
+        width: 32vw;
+        height: 66vh;
+        height: calc(var(--vh, 1vh) * 66);
+        position: absolute;
+        top: 34vh;
+        top: calc(var(--vh, 1vh) * 34);
+        left: 63vw;
+        z-index: -1;
+    }
+
+    .title{
+        font-size: 5vw;
+        top: 1vh;
+        top: calc(var(--vh, 1vh) * 1);
+        right: 9vw;
+    }
+
+    .packman{
+        width: 3.5vw;
+        height: 8vh;
+        height: calc(var(--vh, 1vh) * 8);
+        left: 23vw;
+        top: 33vh;
+        top: calc(var(--vh, 1vh) * 33);
+    }
+
+    #score{
+        position: absolute;
+        top: 17vh;
+        top: calc(var(--vh, 1vh) * 17);
+        left: 72vw;
+        font-size: 3vw;
+    }
+
+    .space{
+        width: 1.7vw;
+        height: 3vh;
+        height: calc(var(--vh, 1vh) * 3);
+    }
+
+    .arrow{
+        width: 4vw;
+        height: auto;
+    }
+
+    .rows{
+        width: 50vw;
+        height: 90vh;
+        height: calc(var(--vh, 1vh) * 90);
+        top: 0vh;
+        top: calc(var(--vh, 1vh) * 0);
+        left: 0vw;
+    }
+
+    .vertical{
+        top: 35vh;
+        top: calc(var(--vh, 1vh) * 35);
+        left: 61vw;
+    }
+
+    .horizontal{
+        top: 41.5vh;
+        top: calc(var(--vh, 1vh) * 41.5);
+        left: 49.4vw;
+    }
+
+    .allRow{
+        width: 50vw;
+        left: 1.5vw;
+    }
+    
+    .food{
+        width: 1.7vw;
+        height: 3vh;
+        height: calc(var(--vh, 1vh) * 3);
+    }
+
+    .nothing{
+        width: 1.7vw;
+        height: 3vh;
+        height: calc(var(--vh, 1vh) * 3);
+    }
+
+    .questionsArea{
+        width: 75vw;
+        top: 8vh;
+        top: calc(var(--vh, 1vh) * 8);
+        left: 11vw;
+        font-size: 2.5vw;
+    }
+
+    .subjectTitle{
+        font-size: 3vw;
+    }
+
+    .feedBackBox{
+        font-size: 4vw;
+        width: 45vw;
+        top: 20vh;
+        top: calc(var(--vh, 1vh) * 20);
+        left: 27vw;
+        text-align: center;
+    }
+
+    .backBtn{
+        font-size: 3vw;
+        margin-top: 1vh;
+        margin-top: calc(var(--vh, 1vh) * 1);
+        font-family: VarelaRound;
+        padding: 1vw;
+        border-radius: 1.5vw;
+    }
+
+    .submitBtn{
+        font-size: 2.5vw;
+        padding: 1vw;
+    }
+
+    #n37{
+        transform: rotate(180deg);
+        padding-left: 2.5vw;
+        padding-right: 8vw;
+    }
+    
+    #n38{
+        transform: rotate(-90deg);
+        margin-bottom: 5vh;
+        margin-bottom: calc(var(--vh, 1vh) * 5);
+    }
+    
+    #n40{
+        transform: rotate(90deg);
+        margin-bottom: 3vh;
+        margin-bottom: calc(var(--vh, 1vh) * 3);
+    }
+
+    .congrats{
+        font-size: 7vw;
+        margin-top: 3vh;
+        margin-top: calc(var(--vh, 1vh) * 3);
+    }
+
+    .finalScore{
+        top: 33vh;
+        top: calc(var(--vh, 1vh) * 33);
+        left: 63vw;
+        font-size: 3.5vw;
+        padding: 2vw;
+        border-radius: 2vw;
+        width: 30vw;
+        text-align: center;
+    }
+
+    .credits{
+        top: 60vh;
+        top: calc(var(--vh, 1vh) * 60);
+        left: 58vw;
+        font-size: 3vw;
+    }
+
+    .confetti{
+        top: 0vh;
+        top: calc(var(--vh, 1vh) * 0);
+        left: 42vw;
+        height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
+        width: auto;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 440px) {
+    .instructions{
+        left: 12.5vw;
+        top: 20vh;
+        top: calc(var(--vh, 1vh) * 20);
+        width: 70vw;
+        font-size: 5vw;
+    }
+    
+    .instructionsTitle{
+        font-size: 9vw;
+    }
+    
+    .instructionsButton{
+        font-size: 5vw;
+        padding: 2vw;
+        border-radius: 2vw;
+    }
+
+    #boardArea{
+        width: 75vw;
+        height: 63vh;
+        height: calc(var(--vh, 1vh) * 63);
+        left: 13vw;
+        top: 12vh;
+        top: calc(var(--vh, 1vh) * 12);
+    } 
+
+    .packman{
+        width: 7.2vw;
+        height: 6.3vh;
+        height: calc(var(--vh, 1vh) * 6.3);
+        left: 33vw;
+        top: 23vh;
+        top: calc(var(--vh, 1vh) * 23);
+    }
+
+    .title{
+        font-size: 10vw;
+        top: 0vh;
+        top: calc(var(--vh, 1vh) * 0);
+        left: 16vw;
+        text-align: center;
+        width: 70vw;
+    }
+
+    .arrow{
+        width: 7vw;
+        height: auto;
+    }
+
+    #score{
+        position: absolute;
+        top: 82vh;
+        top: calc(var(--vh, 1vh) * 82);
+        left: 10vw;
+        font-size: 5vw;
+    }
+
+    .imgBack{
+        width: 30vw;
+        height: 23vh;
+        height: calc(var(--vh, 1vh) * 23);
+        position: absolute;
+        top: 77vh;
+        top: calc(var(--vh, 1vh) * 77);
+        left: 66vw;
+        z-index: -1;
+    }
+
+    .space{
+        width: 3vw;
+        height: 1.7vh;
+        height: calc(var(--vh, 1vh) * 1.7);
+    }
+
+    .rows{
+        width: 73vw;
+        height: 63vh;
+        height: calc(var(--vh, 1vh) * 63);
+        left: 0vw;
+        top: 0vh;
+        top: calc(var(--vh, 1vh) * 0);
+    }
+
+    .vertical{
+        top: 78vh;
+        top: calc(var(--vh, 1vh) * 78);
+        left: 46vw;
+    }
+
+    .horizontal{
+        top: 83.5vh;
+        top: calc(var(--vh, 1vh) * 83.5);
+        left: 32.5vw;
+    }
+
+    .allRow{
+        width: 73vw;
+        left: 1.5vw;
+    }
+    
+    .food{
+        width: 3vw;
+        height: 1.7vh;
+        height: calc(var(--vh, 1vh) * 1.7);
+    }
+
+    .nothing{
+        width: 3vw;
+        height: 1.7vh;
+        height: calc(var(--vh, 1vh) * 1.7);
+    }
+
+    #n37{
+        padding-left: 7vw;
+        padding-right: 6vw;
+    }
+    
+    #n38{
+        margin-top: 1vh;
+        margin-top: calc(var(--vh, 1vh) * 1);
+    }
+
+    .questionsArea{
+        width: 75vw;
+        top: 8vh;
+        top: calc(var(--vh, 1vh) * 8);
+        left: 11vw;
+        font-size: 5vw;
+    }
+
+    .subjectTitle{
+        font-size: 6vw;
+    }
+
+    .feedBackBox{
+        font-size: 6vw;
+        width: 45vw;
+        top: 17vh;
+        top: calc(var(--vh, 1vh) * 17);
+        left: 23vw;
+        text-align: center;
+    }
+
+    .backBtn{
+        font-size: 4.5vw;
+        margin-top: 2vh;
+        margin-top: calc(var(--vh, 1vh) * 2);
+        font-family: VarelaRound;
+        padding: 2vw;
+        border-radius: 2vw;
+    }
+
+    .submitBtn{
+        font-size: 4.5vw;
+        padding: 2vw;
+    }
+
+    .congrats{
+        font-size: 12vw;
+        margin-top: 5vh;
+        margin-top: calc(var(--vh, 1vh) * 5);
+    }
+
+    .finalScore{
+        top: 23vh;
+        top: calc(var(--vh, 1vh) * 23);
+        left: 18vw;
+        font-size: 7vw;
+        border-radius: 3vw;
+        width: 60vw;
+        padding-right: 2vw;
+        text-align: center;
+    }
+
+    .credits{
+        top: 80vh;
+        top: calc(var(--vh, 1vh) * 80);
+        left: 33vw;
+        font-size: 4.5vw;
+        width: 65vw;
+    }
+
+    .confetti{
+        width: 100vw;
+        height: 70vh;
+        height: calc(var(--vh, 1vh) * 70);
+        top: 15vh;
+        top: calc(var(--vh, 1vh) * 15);
+        left: 0vw;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .instructions{
+        left: 12.5vw;
+        top: 10vh;
+        top: calc(var(--vh, 1vh) * 10);
+        width: 70vw;
+        font-size: 3vw;
+    }
+    
+    .instructionsTitle{
+        font-size: 6vw;
+    }
+    
+    .instructionsButton{
+        font-size: 3vw;
+        padding: 1vw;
+        border-radius: 2vw;
+    }
+
+    #boardArea{
+        width: 70vw;
+        height: 75vh;
+        height: calc(var(--vh, 1vh) * 75);
+        left: 4vw;
+        top: 3vh;
+        top: calc(var(--vh, 1vh) * 3);
+    }
+
+    .title{
+        font-size: 9vw;
+        top: 75vh;
+        top: calc(var(--vh, 1vh) * 75);
+        left: 2vw;
+    }
+
+    .imgBack{
+        width: 38vw;
+        height: 40vh;
+        height: calc(var(--vh, 1vh) * 40);
+        position: absolute;
+        top: 60vh;
+        top: calc(var(--vh, 1vh) * 60);
+        left: 65vw;
+        z-index: -1;
+    }
+
+    #score{
+        position: absolute;
+        top: 87vh;
+        top: calc(var(--vh, 1vh) * 87);
+        left: 30vw;
+        font-size: 5vw;
+    }
+
+    .packman{
+        width: 5vw;
+        height: 6vh;
+        height: calc(var(--vh, 1vh) * 6);
+        left: 33vw;
+        top: 28vh;
+        top: calc(var(--vh, 1vh) * 28);
+    }
+    
+    .space{
+        width: 1.8vw;
+        height: 1.5vh;
+        height: calc(var(--vh, 1vh) * 1.5);
+    }
+    
+    .food{
+        width: 1.8vw;
+        height: 1.5vh;
+        height: calc(var(--vh, 1vh) *1.5);
+    }
+
+    .nothing{
+        width: 1.8vw;
+        height: 1.5vh;
+        height: calc(var(--vh, 1vh) * 1.5);
+    }
+
+    .rows{
+        width: 70vw;
+        height: 75vh;
+        height: calc(var(--vh, 1vh) * 75);
+    }
+
+    .allRow{
+        width: 70vw;
+        left: 1.5vw;
+    }
+
+    .arrow{
+        width: 5vw;
+        height: auto;
+    }
+
+    .vertical{
+        top: 40vh;
+        top: calc(var(--vh, 1vh) * 40);
+        left: 80vw;
+    }
+
+    .horizontal{
+        top: 44.5vh;
+        top: calc(var(--vh, 1vh) * 44.5);
+        left: 67.5vw;
+    }
+
+    .questionsArea{
+        width: 75vw;
+        top: 8vh;
+        top: calc(var(--vh, 1vh) * 8);
+        left: 11vw;
+        font-size: 2.5vw;
+    }
+
+    .subjectTitle{
+        font-size: 4vw;
+    }
+
+    .feedBackBox{
+        font-size: 3vw;
+        width: 40vw;
+        top: 20vh;
+        top: calc(var(--vh, 1vh) * 20);
+        left: 27vw;
+        text-align: center;
+    }
+
+    .backBtn{
+        font-size: 2.5vw;
+        margin-top: 2vh;
+        margin-top: calc(var(--vh, 1vh) * 2);
+        padding: 1vw;
+        font-family: VarelaRound;
+    }
+
+    .submitBtn{
+        font-size: 2.5vw;
+    }
+
+    #n37{
+        padding-left: 4vw;
+        padding-right: 8vw;
+    }
+    
+    #n38{
+        margin-bottom: 4vh;
+        margin-bottom: calc(var(--vh, 1vh) * 4);
+    }
+    
+    #n40{
+        margin-bottom: 2vh;
+        margin-bottom: calc(var(--vh, 1vh) * 2);
+    }
+
+    .congrats{
+        font-size: 10vw;
+    }
+
+    .finalScore{
+        top: 42vh;
+        top: calc(var(--vh, 1vh) * 42);
+        right: 33vw;
+        font-size: 3.5vw;
+        border-radius: 2.5vw;
+        padding: 2.5vw;
+        width: 30vw;
+    }
+
+    .credits{
+        top: 78vh;
+        top: calc(var(--vh, 1vh) * 78);
+        left: 3vw;
+        font-size: 3vw;
+    }
+
+    .confetti{
+        width: 75vw;
+        height: auto;
+        top: 0vh;
+        top: calc(var(--vh, 1vh) * 0);
+        left: 10vw;
+    }
+} 
+
+/*Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    #boardArea{
+        width: 52vw;
+        height: 90vh;
+        height: calc(var(--vh, 1vh) * 90);
+        left: 2vw;
+        top: 5vh;
+        top: calc(var(--vh, 1vh) * 5);
+    }
+
+    #score{
+        position: absolute;
+        top: 15vh;
+        top: calc(var(--vh, 1vh) * 15);
+        left: 70vw;
+    }   
+
+    .title{
+        font-size: 7vw;
+        top: 0vh;
+        top: calc(var(--vh, 1vh) * 0);
+        left: 60vw;
+    }
+
+    .packman{
+        width: 4vw;
+        height: 7vh;
+        height: calc(var(--vh, 1vh) * 7);
+        left: 24vw;
+        top: 34vh;
+        top: calc(var(--vh, 1vh) * 34);
+    }
+
+    .imgBack{
+        width: 40vw;
+        height: 60vh;
+        height: calc(var(--vh, 1vh) * 60);
+        position: absolute;
+        top: 40vh;
+        top: calc(var(--vh, 1vh) * 40);
+        left: 60vw;
+        z-index: -1;
+    }
+    
+    .space{
+        width: 1.5vw;
+        height: 2vh;
+        height: calc(var(--vh, 1vh) * 2);
+    }
+    
+    .food{
+        width: 1.5vw;
+        height: 2vh;
+        height: calc(var(--vh, 1vh) * 2);
+    }
+
+    .nothing{
+        width: 1.5vw;
+        height: 2vh;
+        height: calc(var(--vh, 1vh) * 2);
+    }
+
+    .rows{
+        width: 52vw;
+        height: 90vh;
+        height: calc(var(--vh, 1vh) * 90);
+        left: 0vw;
+        top: 0vh;
+        top: calc(var(--vh, 1vh) * 0);
+    }
+
+    .allRow{
+        width: 52vw;
+        left: 1.5vw;
+    }
+
+    .arrow{
+        width: 4vw;
+        height: auto;
+    }
+
+    .vertical{
+        top: 26.7vh;
+        top: calc(var(--vh, 1vh) * 26.7);
+        left: 60vw;
+    }
+
+    .horizontal{
+        top: 32vh;
+        top: calc(var(--vh, 1vh) * 32);
+        left: 48.4vw;
+    }
+
+    #n37{
+        transform: rotate(180deg);
+        padding-left: 3vw;
+        padding-right: 8vw;
+    }
+    
+    #n38{
+        transform: rotate(-90deg);
+        margin-bottom: 4vh;
+        margin-bottom: calc(var(--vh, 1vh) * 4);
+    }
+    
+    #n40{
+        transform: rotate(90deg);
+        margin-bottom: 2vh;
+        margin-bottom: calc(var(--vh, 1vh) * 2);
+    }
+
+    .congrats{
+        font-size: 8vw;
+    }
+
+    .finalScore{
+        top: 30vh;
+        top: calc(var(--vh, 1vh) * 30);
+        right: 33vw;
+        width: 30vw;
+        font-size: 3.5vw;
+        padding: 2vw;
+        text-align: center;
+    }
+
+    .credits{
+        top: 70vh;
+        top: calc(var(--vh, 1vh) * 70);
+        left: 58vw;
+        font-size: 3vw;
+    }
+}
+
+/*Very Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 1350px) {
+    #boardArea{
+        width: 52vw;
+        height: 90vh;
+        height: calc(var(--vh, 1vh) * 90);
+        left: 2vw;
+        top: 5vh;
+        top: calc(var(--vh, 1vh) * 5);
+    }
+
+    #score{
+        position: absolute;
+        top: 17vh;
+        top: calc(var(--vh, 1vh) * 17);
+        left: 75vw;
+        font-size: 4vw;
+    }   
+
+    .title{
+        font-size: 6vw;
+        top: 0vh;
+        top: calc(var(--vh, 1vh) * 0);
+        left: 65vw;
+    }
+
+    .packman{
+        width: 4vw;
+        height: 7vh;
+        height: calc(var(--vh, 1vh) * 7);
+        left: 24vw;
+        top: 34vh;
+        top: calc(var(--vh, 1vh) * 34);
+    }
+
+    .imgBack{
+        width: 32vw;
+        height: 60vh;
+        height: calc(var(--vh, 1vh) * 60);
+        position: absolute;
+        top: 40vh;
+        top: calc(var(--vh, 1vh) * 40);
+        left: 65vw;
+        z-index: -1;
+    }
+    
+    .space{
+        width: 1.5vw;
+        height: 2vh;
+        height: calc(var(--vh, 1vh) * 2);
+    }
+    
+    .food{
+        width: 1.5vw;
+        height: 2vh;
+        height: calc(var(--vh, 1vh) * 2);
+    }
+
+    .nothing{
+        width: 1.5vw;
+        height: 2vh;
+        height: calc(var(--vh, 1vh) * 2);
+    }
+
+    .rows{
+        width: 52vw;
+        height: 90vh;
+        height: calc(var(--vh, 1vh) * 90);
+        left: 0vw;
+        top: 0vh;
+        top: calc(var(--vh, 1vh) * 0);
+    }
+
+    .allRow{
+        width: 52vw;
+        left: 1.5vw;
+    }
+
+    .arrow{
+        width: 4vw;
+        height: auto;
+    }
+
+    .vertical{
+        top: 26.7vh;
+        top: calc(var(--vh, 1vh) * 26.7);
+        left: 60vw;
+    }
+
+    .horizontal{
+        top: 32vh;
+        top: calc(var(--vh, 1vh) * 32);
+        left: 48.4vw;
+    }
+
+    #n37{
+        transform: rotate(180deg);
+        padding-left: 3vw;
+        padding-right: 8vw;
+    }
+    
+    #n38{
+        transform: rotate(-90deg);
+        margin-bottom: 4vh;
+        margin-bottom: calc(var(--vh, 1vh) * 4);
+    }
+    
+    #n40{
+        transform: rotate(90deg);
+        margin-bottom: 2vh;
+        margin-bottom: calc(var(--vh, 1vh) * 2);
+    }
+
+    .congrats{
+        font-size: 7vw;
+        margin-top: 3vh;
+        margin-top: calc(var(--vh, 1vh) * 3);
+    }
+
+    .finalScore{
+        top: 30vh;
+        top: calc(var(--vh, 1vh) * 30);
+        right: 5vw;
+        width: 25vw;
+        font-size: 2.5vw;
+        padding: 1.5vw;
+        text-align: center;
+    }
+
+    .credits{
+        top: 66vh;
+        top: calc(var(--vh, 1vh) * 66);
+        left: 65vw;
+        font-size: 2.5vw;
+    }
+
+    .confetti{
+        width: 60vw;
+        height: auto;
+        left: 0vw;
+        top: 0vh;
+        top: calc(var(--vh, 1vh) * 0);
+    }
+}
